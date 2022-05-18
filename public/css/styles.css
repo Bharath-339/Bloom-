@@ -1,0 +1,569 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 400;
+    color: black;
+}
+html {
+    scroll-behavior: smooth;
+  }
+
+header{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.301),rgba(0, 0, 0, 0.301)), url("../images/cover-page2.jpg");
+    max-width: 100%;
+    height: 100vh;
+    /* position: fixed; */
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navdiv{
+    padding: 20px 0 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    background-color: transparent; 
+}
+
+
+.logo{
+    display: flex;
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    align-items: center;
+    gap:10px;
+}
+.logo-img{
+    margin-bottom: 8px;
+    width: 70px;
+    height: auto;
+}
+.navdiv ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
+.signup_btn{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.links li a,.signup_btn{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+    
+}
+.links li::after{
+    content:'';
+    width: 0%;
+    height: 2px;
+    background-color: #fff;
+    display: block;
+    margin: auto;
+    transition: 1s;
+}
+.links li:hover::after{
+    
+    width: 100%;
+
+}
+.links li{
+    color: white;
+    list-style-type: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-weight: bold;
+}
+.dd-content{
+    display: none;
+    position: absolute;
+    background-color: aliceblue;
+}
+.dropdown:hover .dd-content{
+    display: block;
+    z-index: 1;
+}
+.main-header2{
+    background-image:  radial-gradient(rgba(0, 0, 0, 0.137),rgba(0, 0, 0, 0.164)), url(images/banner3.jpeg);
+    width: 100%;
+    height: 100vh;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+
+}
+/* .main-header2 .links li,.main-header2 .links a{
+    color: chartreuse;
+} */
+
+.content{
+    margin: 150px auto 40px auto;
+    transition: all 0.5s ease-in;
+}
+.content h1{
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+}
+.content p{
+    font-weight: 700;
+    color: white;
+    margin: 20px auto;
+    text-align: center;
+    line-height: 30px;
+}
+.btn a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+.btn{
+    font-weight: bold;
+    border: 1px solid white;
+    border-radius: 10rem;
+    margin: 15px;
+    padding: 16px 32px;
+    background-color:transparent;
+    font-size: 20px;
+    transition: all 0.8s;
+}
+
+.btn:hover{
+    background-color: rgb(165, 201, 110) ;
+    
+}
+
+/* ---------- forms -----------*/
+
+.form_h1,.form_p{
+    margin-bottom: 20px;
+}
+input[type=text], input[type=password],input[type=email] {
+    width: 80%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: block;
+    border: none;
+    background: #f1f1f1;
+  }
+  
+  /* Add a background color when the inputs get focus */
+  input[type=text]:focus, input[type=password]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+  
+  /* Set a style for all buttons */
+  .form_button {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+  
+  /* Extra styles for the cancel button */
+  .cancelbtn {
+    padding: 14px 20px;
+    margin-right: 4px;
+    background-color: #f44336;
+  }
+  
+  /* Float cancel and signup buttons and add an equal width */
+  .cancelbtn, .signupbtn {
+    float: left;
+    width: 40%;
+  }
+  
+  /* Add padding to container elements */
+  .container {
+    padding: 16px;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #474e5d3d;
+    padding-top: 50px;
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto 15% auto; 
+    border: 1px solid rgba(0, 0, 0, 0.207);
+    width: 50%; 
+  }
+  
+  /* Style the horizontal ruler */
+  hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+  }
+   
+  /* The Close Button (x) */
+  .close {
+    position: absolute;
+    right: 35px;
+    top: 15px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #f44336;
+    cursor: pointer;
+  }
+  
+  .center_btn{
+      width: 100%;
+      margin:auto;
+  }
+  /* Clear floats */
+  .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  /* Change styles for cancel button and signup button on extra small screens */
+  @media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+  }
+/* --------------------------- */
+
+.headings{
+    margin: 50px auto;
+    font-size: 36px;
+    text-align: center;
+    
+}
+.pro-img{
+    width: 300px;
+    height: auto;
+    border-radius: 50%;
+}
+
+.pro-img:hover{
+    transition: 0.5s;
+    box-shadow: 0 0 12px black;
+}
+.img-txt{
+    margin: 30px 0;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.div-pro{
+    margin: 40px 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.div-pro a{
+    text-decoration: none;
+    text-align: center;
+    
+}
+
+.div-pro a:hover{
+    width: 450px;
+    transition: width 0.5s;
+
+}
+
+.page{
+    background-color: antiquewhite;
+    height: 70vh;
+}
+.hcolored{
+    padding: 25px 0;
+}
+.div-services{
+    box-sizing: border-box;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+hr{
+    margin: 0 auto;
+    height: 0;
+    width: 80%;
+    background-color: black;
+    box-shadow: outset 0 0 5px gray;
+}
+.services{
+    margin: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 24px 48px;
+    vertical-align: middle;
+    /* background-color: rgb(173, 207, 121); */
+}
+
+.div-white{
+    background-color: rgb(255, 255, 255);
+    width: 90%;
+    margin: 60px auto;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0 0 4px black;
+}
+.div-team{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    padding: 25px;
+    /* border: 2px solid rgb(199, 183, 161); */
+
+}
+
+.div-team img{
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+   margin: 20px 120px;
+
+}
+.names{
+    text-align: center;
+    font-weight: 700;
+    color: rgb(199, 183, 161);
+    margin: 8px 0;
+}
+
+.div-team p{
+    color: rgb(199, 183, 161);
+    line-height: 25px;
+    padding: 16px;
+    text-align: center;
+}
+
+
+.media{
+    display: flex;
+    text-align: center;
+}
+.media li{
+    text-align: center;
+    list-style-type: none;
+    display: inline-block;
+    
+    padding: 5px 10px;
+    
+}
+/* .media li:first-child{
+    margin-left: 15px;
+} */
+.media li a{
+    text-decoration: none;
+   
+    /* padding: 5px; */
+    color: rgb(199, 183, 161);
+}
+.media li a:hover{
+    color: black;
+    /* background-color: rgb(216, 207, 195); */
+    font-size: 16px;
+    /* border-radius: 8px; */
+    
+}
+
+
+/* .media img{
+    width: 50px;
+    height: auto;
+    display: inline;
+} */
+
+
+/* ------------ Testimonial Container ----------------*/
+
+.testimonial-container {
+    /* background-color: #476ce4; */
+    background-color: antiquewhite;
+    color: #fff;
+    border-radius: 15px;
+    margin: 20px auto;
+    padding: 50px 80px;
+    max-width: 768px;
+    position: relative;
+  }
+  
+  .fa-quote {
+    color: rgba(10, 9, 9, 0.769);
+    font-size: 28px;
+    position: absolute;
+    top: 70px;
+  }
+  
+  .fa-quote-left {
+    left: 40px;
+  }
+  
+  .fa-quote-right {
+    right: 40px;
+  }
+  
+  .testimonial {
+    line-height: 28px;
+    text-align: justify;
+  }
+  
+  .user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user .user-image {
+    border-radius: 50%;
+    height: 75px;
+    width: 75px;
+    object-fit: cover;
+  }
+  
+  .user .user-details {
+    margin-left: 10px;
+  }
+  
+  .user .username {
+    margin: 0;
+  }
+  
+  .user .role {
+    font-weight: normal;
+    margin: 10px 0;
+  }
+  
+  .progress-bar {
+    background-color: rgb(0, 0, 0);
+    height: 4px;
+    width: 100%;
+    transform-origin: left;
+    animation: grow 10s linear infinite;
+  }
+  
+  @keyframes grow {
+    0% {
+      transform: scaleX(0);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .testimonial-container {
+      padding: 20px 30px;
+    }
+  
+    .fa-quote {
+      display: none;
+    }
+  }
+  
+/* -------------------------------------------------- */
+
+.footer{
+    margin-top: 600px;
+    width: 100%;
+    height: 300px;
+    box-sizing: border-box;
+    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    align-items: center;
+    justify-items: center;
+   
+}
+
+.footer h3{
+    font-size: 20px;
+    font-weight: 900;
+
+
+}
+.f-list li {
+    padding: 8px;
+    text-align: center;
+}
+.f-list li a:hover {
+    transition: 0.3s;
+    font-weight: 600;
+    color: rgb(255, 0, 0);
+}
+
+@media (max-width:1200px){
+    .div-white{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .div-team{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+    .team{
+        width: 50%;
+        height: auto;
+    }
+    
+
+}
+
+
+
+
+
+
+
+/* ----------------------------------------------------------------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
